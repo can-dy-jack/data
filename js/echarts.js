@@ -1,28 +1,47 @@
-var myChart = echarts.init(document.getElementById('main'));
+// 基于准备好的dom，初始化echarts实例
+var myChart = echarts.init(document.getElementById('echart-normal'));
+// 指定图表的配置项和数据
 var option = {
     title: {
-        text: 'ECharts'
+        text: '温-盐-密'
     },
     tooltip: {},
     legend: {
-        data:['销量']
+        data:['温度','密度','盐度']
     },
     xAxis: {
-        data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+        data: ['Jan','Feb','Mar','Jun','Aug','Sep']
+        //"潮汐","潮流","风速","温度","盐度","密度",'风速','水深'
     },
     yAxis: {},
     series: [{
-        name: '销量',
+        name: '温度',
         type: 'bar',
-        data: [5, 20, 36, 10, 10, 20]
-    }]
+        // line（折线图）、bar（柱状图）、pie（饼图）、scatter（散点图）、graph（关系图）、tree（树图）、...
+        data: [10, 23, 5,11, 6,12]
+    },{
+        name: '密度',
+        type: 'line',
+        data: [5, 20, 26, 10, 10,12]
+    },{
+        type: 'pie',
+        name: '盐度',
+        center: ['70%',110],
+        radius: 35,
+        data:[
+            {"name":'表层',"value":23},
+            {"name":'中层',"value":15},
+            {"name":'深层',"value":9},
+        ]
+    }
+    ]
 };
+// 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
 
 
 // 2
-var dom = document.getElementById("container");
-var myChart2 = echarts.init(dom);
+var myChart2 = echarts.init(document.getElementById("echart-axis"));
 var app = {};
 var option2;
 var base = +new Date(2008, 1, 1);
