@@ -16,10 +16,15 @@ toggleBtn.addEventListener('click',()=>{
         toggleBtn.classList.add("toggled");
         darkenText.classList.remove("unselected");
         lightenText.classList.add("unselected");
-        lightenText.style.color = "#cccccc";
-        darkenText.style.color = "white";
     }
 
+    if(toggleBtn.classList.contains("toggled")){
+        lightenText.style.color = "#cccccc";
+        darkenText.style.color = "white";
+    }else{
+        lightenText.style.color = "black";
+        darkenText.style.color = "#333";
+    }
     if(bd.classList.contains("color-black-1")){
         bd.classList.add("color-white");
         bd.classList.remove("color-black-1");

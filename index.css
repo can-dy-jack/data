@@ -1,6 +1,9 @@
 *{
 	margin: 0;padding: 0;
 }
+body{
+	font-family: 'Micrsoft YaHei UI',tahoma,sans-serif;
+}
 nav{
 	height: 50px;
 	width: 100%;
