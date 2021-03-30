@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #3e5460;
+    color: white;
+}
+.container {
+    padding: 0 10px;
+    width: 400px;
+    height: 100vh;
+    margin: 30px auto;
+}
+
+.title {
+    text-align: center;
+    color: #f0d1a9;
+    margin: 20px 0;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    outline: none;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #a3c455;
+    margin: 5px 0 20px 0;
+
+}
+
+/* toggle */
+.toggle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.toggle-text {
+    font-size: 18px;
+}
+
+.toggle-btn {
+    height: 30px;
+    width: 60px;
+    border-radius: 30px;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: gray;
+}
+
+.inner-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 250ms;
+}
+
+.toggled > .inner-circle {
+    transform: translateX(30px);
+    background-color: #333;
+}
+
+.unselected {
+    opacity: 0.3;
+}

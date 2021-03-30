@@ -1,0 +1,21 @@
+.trademark{
+	width: 100%;
+	height: 70px;
+	background-color: #efefef;
+	/* background-color: #929292; */
+}
+.trademark p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0 0 0;
+}
+.trademark>p>span{
+	margin:0 30px;
+}
+.trademark>p>span a{
+    color: darkcyan;
+}
+.trademark>p>span a:hover{
+	color: white;
+}

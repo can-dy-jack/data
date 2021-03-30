@@ -1,0 +1,38 @@
+*{
+	margin: 0;padding: 0;
+}
+nav{
+	height: 50px;
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: #efefef;
+}
+.navbox{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	backdrop-filter: brightness(100%) saturate(100%) blur(15px);
+	z-index: 1000;
+}
+.navbox h1{
+	position: fixed;
+	display: inline-block;
+	line-height: 50px;
+	padding-left: 20px;
+}
+.navbox h1:hover{
+	cursor: pointer;
+}
+.box{
+	display: flex;
+	flex-direction: row;
+	row-gap: 3;
+	justify-content: center;align-items: center;
+}
+.c{
+	height: 400px;width: 400px;
+	margin: 0 auto 80px auto;
+}
+.bottom-box{
+	margin-bottom: 80px;
+}

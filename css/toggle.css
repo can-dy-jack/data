@@ -1,0 +1,35 @@
+.toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 50px;
+}
+.toggle-text {
+    font-size: 18px;
+}
+
+.toggle-btn {
+    height: 25px;
+    width: 50px;
+    border-radius: 25px;
+    padding: 3px;
+    margin: 0 10px;
+    background-color: gray;
+}
+
+.inner-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all 250ms;
+}
+
+.toggled > .inner-circle {
+    transform: translateX(25px);
+    background-color: #333;
+}
+
+.unselected {
+    opacity: 0.3;
+}
