@@ -31,10 +31,7 @@ nav{
 	flex-direction: row;
 	row-gap: 3;
 	justify-content: center;align-items: center;
-}
-.c{
-	height: 400px;width: 400px;
-	margin: 0 auto 80px auto;
+	margin-bottom: 50px;
 }
 .bottom-box{
 	margin-bottom: 80px;

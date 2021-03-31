@@ -1,17 +1,22 @@
-// 基于准备好的dom，初始化echarts实例
 var myChart = echarts.init(document.getElementById('echart-normal'));
-// 指定图表的配置项和数据
 var option = {
     title: {
         text: '温-盐-密'
     },
     tooltip: {},
+    grid:{
+        left: '10%',
+        right: '10%',
+        top: 80,
+        bottom: 60
+    },
     legend: {
         data:['温度','密度','盐度']
     },
     xAxis: {
         data: ['Jan','Feb','Mar','Jun','Aug','Sep']
         //"潮汐","潮流","风速","温度","盐度","密度",'风速','水深'
+        //'潮汐的调和常数','潮流的调和常数'
     },
     yAxis: {},
     series: [{
@@ -36,11 +41,102 @@ var option = {
     }
     ]
 };
-// 使用刚指定的配置项和数据显示图表。
 myChart.setOption(option);
 
+// echart-nightingale
+var echartNg = echarts.init(document.getElementById('echart-nightingale'));
+var optionNG;
+var colorTest;
+var appNG = {};
+optionNG = {
+    title: {
+        text: '四大洋',
+        left: 'center'
+    },
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name: '饼图',
+            type: 'pie',
+            radius: '50%',
+            data:[
+                {value:274, name:'太平洋'},
+                {value:310, name:'大西洋'},
+                {value:335, name:'印度洋'},
+                {value:400, name:'北冰洋'}
+            ],
+            roseType: 'angle',
+            itemStyle: {
+                normal: {
+                    color: '#c23531'
+                }
+            }
+        }
+    ]
+};
+if (optionNG && typeof optionNG === 'object') {
+    echartNg.setOption(optionNG);
+}
 
-// 2
+// echart-reverse
+var chartEr = echarts.init(document.getElementById("echart-reverse"));
+var app = {};
+var optionEr;
+optionEr = {
+    dataset: {
+        source: [
+            ['score', 'amount', 'product'],
+            [89.3, 582, 'Matcha Latte'],
+            [57.1, 782, 'Milk Tea'],
+            [74.4, 410, 'Cheese Cocoa'],
+            [50.1, 127, 'Cheese Brownie'],
+            [89.7, 201, 'Matcha Cocoa'],
+            [68.1, 791, 'Tea'],
+            [19.6, 918, 'Orange Juice'],
+            [10.6, 101, 'Lemon Juice'],
+            [32.7, 201, 'Walnut Brownie']
+        ]
+    },
+    grid: {containLabel: true},
+    xAxis: {name: 'amount'},
+    yAxis: {type: 'category'},
+    visualMap: {
+        orient: 'horizontal',
+        left: 'center',
+        min: 10,
+        max: 100,
+        text: ['High Score', 'Low Score'],
+        // Map the score column to color
+        dimension: 0,
+        inRange: {
+            color: ['#65B581', '#FFCE34', '#FD665F']
+        }
+    },
+    series: [
+        {
+            type: 'bar',
+            encode: {
+                // Map the "amount" column to X axis.
+                x: 'amount',
+                // Map the "product" column to Y axis
+                y: 'product'
+            }
+        }
+    ]
+};
+if (optionEr && typeof optionEr === 'object') {
+    chartEr.setOption(optionEr);
+}
+
+
+// 4
 var myChart2 = echarts.init(document.getElementById("echart-axis"));
 var app = {};
 var option2;
@@ -62,10 +158,6 @@ option2 = {
         position: function (pt) {
             return [pt[0], '10%'];
         }
-    },
-    title: {
-        left: 'center',
-        text: '大数据量面积图',
     },
     toolbox: {
         feature: {
@@ -109,54 +201,173 @@ if (option2 && typeof option2 === 'object') {
 }
 
 
-// 3
-var dom = document.getElementById("container2");
-var myChart3 = echarts.init(dom);
+// 5
+var chartData = echarts.init(document.getElementById("echart-data"));
 var app = {};
-var option3;
-option3 = {
-    dataset: {
-        source: [
-            ['score', 'amount', 'product'],
-            [89.3, 58212, 'Matcha Latte'],
-            [57.1, 78254, 'Milk Tea'],
-            [74.4, 41032, 'Cheese Cocoa'],
-            [50.1, 12755, 'Cheese Brownie'],
-            [89.7, 20145, 'Matcha Cocoa'],
-            [68.1, 79146, 'Tea'],
-            [19.6, 91852, 'Orange Juice'],
-            [10.6, 101852, 'Lemon Juice'],
-            [32.7, 20112, 'Walnut Brownie']
-        ]
-    },
-    grid: {containLabel: true},
-    xAxis: {name: 'amount'},
-    yAxis: {type: 'category'},
-    visualMap: {
-        orient: 'horizontal',
-        left: 'center',
-        min: 10,
-        max: 100,
-        text: ['High Score', 'Low Score'],
-        // Map the score column to color
-        dimension: 0,
-        inRange: {
-            color: ['#65B581', '#FFCE34', '#FD665F']
+var optionData;
+optionData = {
+    color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
         }
     },
+    legend: {
+        data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '5%',
+        right: '5%',
+        bottom: '5%',
+        top: 50,
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
     series: [
         {
-            type: 'bar',
-            encode: {
-                // Map the "amount" column to X axis.
-                x: 'amount',
-                // Map the "product" column to Y axis
-                y: 'product'
-            }
+            name: 'Line 1',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(128, 255, 165)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(1, 191, 236)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [140, 232, 101, 264, 90, 340, 250]
+        },
+        {
+            name: 'Line 2',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(0, 221, 255)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(77, 119, 255)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [120, 282, 111, 234, 220, 340, 310]
+        },
+        {
+            name: 'Line 3',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(55, 162, 255)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(116, 21, 219)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [320, 132, 201, 334, 190, 130, 220]
+        },
+        {
+            name: 'Line 4',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 0, 135)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(135, 0, 157)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [220, 402, 231, 134, 190, 230, 120]
+        },
+        {
+            name: 'Line 5',
+            type: 'line',
+            stack: '总量',
+            smooth: true,
+            lineStyle: {
+                width: 0
+            },
+            showSymbol: false,
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {
+                opacity: 0.8,
+                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: 'rgba(255, 191, 0)'
+                }, {
+                    offset: 1,
+                    color: 'rgba(224, 62, 76)'
+                }])
+            },
+            emphasis: {
+                focus: 'series'
+            },
+            data: [220, 302, 181, 234, 210, 290, 150]
         }
     ]
 };
-
-if (option3 && typeof option3 === 'object') {
-    myChart3.setOption(option3);
-}
+chartData.setOption(optionData);

@@ -8,6 +8,7 @@ const nav = document.getElementById("nav");
 const trademark = document.getElementById("trademark");
 
 toggleBtn.addEventListener('click',()=>{
+    colorTest = 'white';
     if(toggleBtn.classList.contains("toggled")){
         toggleBtn.classList.remove("toggled");
         darkenText.classList.add('unselected');
@@ -41,3 +42,4 @@ toggleBtn.addEventListener('click',()=>{
         trademark.style.color = "gray";
     }
 });
+
