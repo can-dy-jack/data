@@ -11,11 +11,11 @@
 	padding: 10px 0 0 0;
 }
 .trademark>p>span{
-	margin:0 30px;
+	margin:0 10px;
 }
 .trademark>p>span a{
     color: darkcyan;
 }
 .trademark>p>span a:hover{
-	color: white;
+	color: rgb(0, 0, 200);
 }
