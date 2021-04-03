@@ -5,10 +5,14 @@ Website of ocean data.
 
 ## 使用的开源js框架
 ### chartjs
-[http://chartjs.cn/](http://chartjs.cn/)
+[chartjs.cn](http://chartjs.cn/)
 
 ### echarts
-[https://echarts.apache.org](https://echarts.apache.org/zh/index.html)
+[echarts.apache.org](https://echarts.apache.org/zh/index.html)
+
+### highcharts
+[highcharts.com](https://www.highcharts.com)
+
 ## 待修复bug
 
 ### 设计方向
