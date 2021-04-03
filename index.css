@@ -10,29 +10,35 @@ nav{
 	margin-bottom: 20px;
 	background-color: #efefef;
 }
-.navbox{
+.nav-box{
 	height: 50px;
 	width: 100%;
 	position: fixed;
 	backdrop-filter: brightness(100%) saturate(100%) blur(15px);
 	z-index: 1000;
 }
-.navbox h1{
+.nav-box h1{
 	position: fixed;
 	display: inline-block;
 	line-height: 50px;
 	padding-left: 20px;
 }
-.navbox h1:hover{
+.nav-box h1:hover{
 	cursor: pointer;
 }
 .box{
 	display: flex;
 	flex-direction: row;
-	row-gap: 3;
 	justify-content: center;align-items: center;
 	margin-bottom: 50px;
 }
 .bottom-box{
 	margin-bottom: 80px;
+}
+
+.linked div{
+	margin: 0 5px;
+}
+.linked div a:hover{
+	color: #a3c455;
 }
