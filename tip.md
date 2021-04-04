@@ -2,7 +2,7 @@
 addEventListener()  
 removeEventListener()  
 event.preventDefault()  
-事件冒泡(从外向内，true)和捕获（从内向外，false）  
+事件冒泡(从外向内，true)和捕获（从内向外，false） - addEventListener()第三个参数    
 e.target  
 e.stopPropagation()  
 ### 定时器
@@ -107,3 +107,18 @@ setAttribute() 编辑元素属性
     ```javascript
     dom.href = "#item"+i
     ```
+
+## json
+json  -  JavaScript对象标签  
+json -- python字典？  
+json -> javascript代码：去序列化 
+
+- eval()  -  加上( )，避免含义不明确的语句
+- 浏览器支持
+    * JSON.parse()
+        + 将字符串转化为JSON对象
+    * JSON.stringify()
+        + 从一个JavaScript对象创建一个JSON编码的对象
+
+键值对、数组、对象、方法（仅在js内）  
+多层次对象
