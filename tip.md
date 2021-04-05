@@ -248,3 +248,9 @@ banana
 pear
 ```
 
+## 模块
+export  
+import  
+
+## ajax
+
