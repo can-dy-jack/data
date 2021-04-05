@@ -97,7 +97,7 @@ setAttribute() 编辑元素属性
     外部资源 完成下载并可以使用时触发
 - appendChild()
     文件 加载完成之后
-  
+
 ### DOM Core and HTML DOM
 - DOM Core 核心部分，可移植，标准的写法 如:
     ```javascript
@@ -254,3 +254,5 @@ import
 
 ## ajax
 
+![doge,表情来自B站](https://i0.hdslb.com/bfs/emote/3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png@112w_112h.webp)
+![表情来自B站](https://i0.hdslb.com/bfs/emote/4191ce3c44c2b3df8fd97c33f85d3ab15f4f3c84.png@112w_112h.webp)

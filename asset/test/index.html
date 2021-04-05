@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,13 @@
         #drag{
             width: 50px;
             height: 50px;
+        }
+        .drop-box{
+            width: 60%;
+            margin: -100px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     </style>
 </head>
@@ -54,9 +61,12 @@
     setInterval(animate,100);
 </script>
 
+<div class="drop-box">
 <div id="drop"></div>
 <p>Drag the image below into he box above:</p>
-<img src="../img/web-logo2.png" alt="logo" id="drag" draggable="true">
+<p><img src="https://i0.hdslb.com/bfs/emote/3087d273a78ccaff4bb1e9972e2ba2a7583c9f11.png@112w_112h.webp" alt="logo" id="drag" draggable="true"></p>
+<!-- https://i0.hdslb.com/bfs/emote/d15121545a99ac46774f1f4465b895fe2d1411c3.png@112w_112h.webp -->
+</div>
 <script>
     function allowDrop(ev){
         ev.preventDefault();
