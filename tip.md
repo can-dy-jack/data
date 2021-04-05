@@ -219,11 +219,32 @@ if(dom.value.search(regex) == -1){
 ### RegExp对象
 new RegExp()  
 test()方法  
-exec()方法  
-
+exec()方法
 
 ### 字符串方法使用regexp
 match\search\replace\split  
 
+## **闭包**
+闭包是访问父作用域的一个函数，即便是在该作用域已经结束之后，也可以执行。  
+使用闭包实现数据私有性。  
 
+例子：
+```javascript
+let x = 'apple';
+var f1 = function (){
+    console.log(x);
+    x = 'pear';
+}
+x = 'banana';
+var f2 = function (){
+    console.log(x);
+}
+f1();
+f2();
+```
+out:
+```bash
+banana
+pear
+```
 

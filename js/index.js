@@ -15,3 +15,14 @@ if (typeof JSON == 'object'){
     console.log('不支持JSON');
 }
 
+let x = 'apple';
+var f1 = function (){
+    console.log(x);
+    x = 'pear';
+}
+x = 'banana';
+var f2 = function (){
+    console.log(x);
+}
+f1();
+f2();
