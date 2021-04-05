@@ -5,18 +5,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chart</title>
-    <!-- <link rel="stylesheet" href="hightchart.css"> -->
-    
+    <title>test</title>
+    <style>
+        #drop{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            border: 1px solid #3e5460;
+        }
+        #drag{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <figure class="highcharts-figure">
-        <div id="container"></div>
-    </figure>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/boost.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="main.js"></script>
+<!--<video id="vid1" width="400" height="300" controls>-->
+<!--    <source src="" type="video/mp4">-->
+<!--    <source>-->
+<!--    <source>-->
+<!--    <p>It's your video</p>-->
+<!--</video>-->
+<!--<audio controls loop autoplay>-->
+<!--    <source src="../music/飞云之下.mp3" type="audio/mpeg">-->
+<!--</audio>-->
+<canvas id="canvas1" width="400" height="300"></canvas>
+<script>
+    let context;
+    let x=100,y=100;
+    let counter = 0;
+    function point(){
+        context.beginPath();
+        context.fillStyle='#fabacd';
+        context.arc(x,y,15,0,Math.PI*2,false);
+        context.closePath();
+        context.fill();
+    }
+    function animate(){
+        context.clearRect(0,0,400,300);
+        counter++;
+        x += 20*Math.sin(counter);
+        y += 20*Math.cos(counter);
+        point();
+    }
+    const cv = document.getElementById('canvas1');
+    context = cv.getContext('2d');
+    setInterval(animate,100);
+</script>
+
+<div id="drop"></div>
+<p>Drag the image below into he box above:</p>
+<img src="../img/web-logo2.png" alt="logo" id="drag" draggable="true">
+<script>
+    function allowDrop(ev){
+        ev.preventDefault();
+    }
+    function drag(ev){
+        ev.dataTransfer.setData('Text', ev.target.id);
+    }
+    function drop(ev){
+        let data = ev.dataTransfer.getData('Text');
+        ev.target.appendChild(document.getElementById(data));
+        ev.preventDefault();
+    }
+    let dragged = document.getElementById('drag');
+    let drophere = document.getElementById('drop');
+    dragged.ondragstart = drag;
+    drophere.ondragover = allowDrop;
+    drophere.ondrop = drop;
+</script>
+
+<!--cookie-->
+<script>
+    let cookieDate = new Date(2021,4,5);
+    document.cookie = "username=kj;time="+cookieDate.toUTCString();
+    console.log(document.cookie)
+</script>
+
 </body>
 </html>
+
+
