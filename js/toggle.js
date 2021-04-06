@@ -41,5 +41,7 @@ toggleBtn.addEventListener('click',()=>{
         trademark.style.backgroundColor = "#121212";
         trademark.style.color = "gray";
     }
+    // option.title.text = 'test title';
+    // console.log(option.title.text)
 });
 

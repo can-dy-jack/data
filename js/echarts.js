@@ -1,7 +1,28 @@
 var myChart = echarts.init(document.getElementById('echart-normal'));
 var option = {
     title: {
-        text: '温-盐-密'
+        text: '温-盐-密',
+        left: '2%',
+        subtext: '友情链接',
+        sublink: 'http://42.193.131.94/#/',
+        subtarget: 'blank',
+        textStyle: {
+            color: 'rgb(0, 145, 234)',
+            fontWeight: 500,
+            fontSize: 20,
+        },
+        subtextStyle: {
+            color: 'rgb(0, 145, 234)'
+        }
+    },
+    legend: {
+        data:['温度','密度','盐度'],
+        right: '5%',
+        top: '2%',
+        textStyle: {
+            color: 'rgb(0,110,220)',
+            fontSize: 14
+        },
     },
     tooltip: {},
     grid:{
@@ -9,9 +30,6 @@ var option = {
         right: '10%',
         top: 80,
         bottom: 60
-    },
-    legend: {
-        data:['温度','密度','盐度']
     },
     xAxis: {
         data: ['Jan','Feb','Mar','Jun','Aug','Sep']
