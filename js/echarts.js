@@ -24,7 +24,9 @@ var option = {
             fontSize: 14
         },
     },
-    tooltip: {},
+    tooltip: {
+        show: true
+    },
     grid:{
         right: '10%',
         bottom: 40,

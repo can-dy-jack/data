@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/click.css">
-    <link rel="stylesheet" href="css/highcharts.css">
-
 </head>
 
 <body class="color-white" id="bd">
@@ -28,47 +26,27 @@
             </div>
         </div>
     </nav>
+
     <div class="box">
         <div id="echart-normal" style="width: 400px;height:400px;"></div>
-        <!--南丁格尔图-->
         <div id="echart-nightingale" style="width: 400px;height:400px"></div>
         <div id="echart-reverse" style="width: 400px;height:400px"></div>
     </div>
+
     <div class="box">
-        <figure class="highcharts-figure">
-            <div id="hightChart"></div>
-        </figure>
-        <figure class="highcharts-figure">
-            <div id="container"></div>
-        </figure>
+        <div><canvas id="chart-bar" width="400" height="400"></canvas></div>
+
+        <div><canvas id="echart-line" width="400" height="400"></canvas></div>
+
+        <div><canvas id="chart-line" width="400" height="400"></canvas></div>
+        <!-- shift + insert 粘贴    ctrl + insert  复制-->
     </div>
-    <div class="box">
-        <div>
-            <canvas id="chart-bar" width="400" height="400"></canvas>
-        </div>
-        <div>
-            <canvas id="chart-line" width="400" height="400"></canvas>
-        </div>
-        <!-- <div>
-            <canvas id="chart-rRadar" width="400" height="400"></canvas>
-        </div> -->
-        <!-- 
-            shift + insert 粘贴
-            ctrl + insert  复制
-        -->
-    </div>
+
     <div class="box bottom-box">
         <div id="echart-axis" style="width: 450px;height:400px;"></div>
         <div id="echart-data" style="width: 450px;height:400px;"></div>
     </div>
-
-    <div class="linked box">
-        <div><a href="./asset/test/colorSelect/index.html" target="_blank">颜色选择器</a></div>
-        <div><a href="./asset/test/index.html" target="_blank">HighChart</a></div>
-        <div id="ael">addEventListener()</div>
-<!--        <div id="event">event</div>-->
-        <script src="js/index.js"></script>
-    </div>
+    <hr>
 
     <footer class="trademark" id="trademark">
         <p>
@@ -79,26 +57,22 @@
             <!-- <span><a href="">d3</a></span> -->
             <span><a href="http://42.193.131.94/#/">42.193.131.94</a></span>
         </p>
+        <p>
+            <span><a href="./asset/test/colorSelect/index.html" target="_blank">颜色选择器</a></span>
+        </p>
         <p><small>© 2021 Kart Jim, Inc.</small></p>
     </footer>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <script src="js/echarts.js"></script>
-    <script src='js/echart2-3.js'></script>
+    <script src="js/echart2.js"></script>
+    <script src='js/echart3.js'></script>
+    <script src="js/echart-line.js"></script>
+    <script src="js/echart4.js"></script>
+    <script src="js/echart5.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
     <script src="js/chart.js"></script>
-
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/boost.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
-    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
-
-    <script src="js/highcharts.js"></script>
-    <script src="js/hightchart2.js"></script>
 
     <script src="js/toggle.js"></script>
 </body>
