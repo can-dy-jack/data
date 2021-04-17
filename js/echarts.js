@@ -1,103 +1,109 @@
 var myChart = echarts.init(document.getElementById('echart-normal'));
 var option = {
     title: {
-        text: '温-盐-密',
+        text: '温度',
         left: '5%',
         subtext: '友情链接',
         sublink: 'http://42.193.131.94/#/',
         subtarget: 'blank',
         textStyle: {
-            color: 'rgb(0, 145, 234)',
-            fontWeight: 500,
+            color: '#08CD7C',
+            fontWeight: 600,
             fontSize: 20,
         },
         subtextStyle: {
-            color: 'rgb(0, 145, 234)'
+            color: '#08CD7C',
+            fontSize: 12,
         }
     },
     legend: {
-        data:['温度','密度','盐度'],
-        right: '5%',
+        data: ['温度'],
+        right: '35%',
         top: '2%',
         textStyle: {
-            color: 'rgb(0,110,220)',
+            color: '#08CD7C',
             fontSize: 14
         },
     },
     tooltip: {
-        show: true
+        show: true,
+        trigger: 'axis',
+        axisPointer: {
+            type: 'shadow'
+        }
     },
-    grid:{
+    toolbox: {
+        show: true,
+        feature: {
+            // mark: {show:true},
+            // dataView: {show: true, readOnly: false},
+            magicType: {
+                show: true,
+                type: ['line', 'bar']
+            },
+            restore: {
+                show: true
+            },
+            saveAsImage: {
+                show: true
+            }
+        },
+        right: '5%',
+        top: '1%'
+    },
+    grid: {
         right: '10%',
         bottom: 40,
     },
     xAxis: {
         type: 'category',
         data: [{
-            value: 'Jan',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        },
-        {
-            value: 'Feb',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        },
-        {
-            value: 'Mar',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        },
-        {
-            value: 'Jun',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        },
-        {
-            value: 'Aug',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        },
-        {
-            value: 'Sep',
-            textStyle: {
-                color: 'rgb(0, 145, 234)'
-            }
-        }],
+                value: 'Jan',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+            {
+                value: 'Feb',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+            {
+                value: 'Mar',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+            {
+                value: 'Jun',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+            {
+                value: 'Aug',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+            {
+                value: 'Sep',
+                textStyle: {
+                    color: '#08CD7C'
+                }
+            },
+        ],
         name: '日期',
         nameTextStyle: {
-            color: 'rgb(0, 145, 234)'
+            color: '#08CD7C'
         }
     },
     yAxis: {},
-    series: [{
+    series: {
         name: '温度',
         type: 'bar',
-        data: [10, 23, 5,11, 6,12]
-    },{
-        name: '密度',
-        type: 'line',
-        data: [5, 20, 26, 10, 10,12]
-    },{
-        type: 'pie',
-        name: '盐度',
-        center: ['70%',110],
-        radius: 35,
-        data:[
-            {"name":'表层',"value":23,},
-            {"name":'中层',"value":15},
-            {"name":'深层',"value":9},
-        ]
+        data: [10, 23, 5, 11, 6, 12]
     }
-    ]
 };
 myChart.setOption(option);
-
-// export { , }
-//"潮汐","潮流","风速","温度","盐度","密度",'风速','水深'
-//'潮汐的调和常数','潮流的调和常数'

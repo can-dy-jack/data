@@ -6,6 +6,15 @@ Website of ocean data.
 ## 使用的开源js框架
 ### chartjs
 [chartjs.cn](http://chartjs.cn/)
+#### 使用
+- [x] 获取Dom，设置option，添加进DOM。
+- [x] 基本配置
+- [x] 标题、副标题
+- [x] 工具栏toobox
+- [x] 提示框tip
+- [x] 图例legend
+- [ ] 时间轴timeline
+
 
 ### echarts
 [echarts.apache.org](https://echarts.apache.org/zh/index.html)

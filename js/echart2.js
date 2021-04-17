@@ -68,5 +68,4 @@ var pieOption = {
         }]
     }]
 };
-// 为echarts对象加载数据
 pieChart.setOption(pieOption);
