@@ -1,5 +1,10 @@
 var myChart = echarts.init(document.getElementById('echart-normal'));
 var option = {
+    textStyle: {
+        color: '#08CD7C',
+        fontSize: 14,
+        fontFamily: '微软雅黑'
+    },
     title: {
         text: '温度',
         left: '5%',
@@ -8,7 +13,7 @@ var option = {
         subtarget: 'blank',
         textStyle: {
             color: '#08CD7C',
-            fontWeight: 600,
+            fontWeight: 400,
             fontSize: 20,
         },
         subtextStyle: {
@@ -57,49 +62,16 @@ var option = {
     },
     xAxis: {
         type: 'category',
-        data: [{
-                value: 'Jan',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-            {
-                value: 'Feb',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-            {
-                value: 'Mar',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-            {
-                value: 'Jun',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-            {
-                value: 'Aug',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-            {
-                value: 'Sep',
-                textStyle: {
-                    color: '#08CD7C'
-                }
-            },
-        ],
-        name: '日期',
-        nameTextStyle: {
-            color: '#08CD7C'
-        }
+        data: ['Jan','Feb','Mar','Jun','Aug','Sep',],
+        name: '月份',
+        nameLocation: 'middle',
+        nameGap: 25
     },
-    yAxis: {},
+    yAxis: {
+        name: 'g/cm²',
+        nameLocation: 'middle',
+        nameGap: 25
+    },
     series: {
         name: '温度',
         type: 'bar',

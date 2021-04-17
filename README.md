@@ -4,23 +4,30 @@
 Website of ocean data.
 
 ## 使用的开源js框架
-### chartjs
-[chartjs.cn](http://chartjs.cn/)
-#### 使用
+### echarts
+- [x] [echarts.apache.org](https://echarts.apache.org/zh/index.html)
+
+#### echarts组件使用
+---
 - [x] 获取Dom，设置option，添加进DOM。
 - [x] 基本配置
 - [x] 标题、副标题
-- [x] 工具栏toobox
-- [x] 提示框tip
-- [x] 图例legend
-- [ ] 时间轴timeline
+- [x] 工具栏 toobox
+- [x] 提示框 tip
+- [x] 图例 legend
+- [x] 坐标轴 xAxis、yAxis
+- [x] 全局字体样式！
+- [ ] 数据系列 series
+- [ ] 时间轴 timeline
+- [ ] 区域缩放 dataZoom
+- [ ] 网格 grid  
+---
 
-
-### echarts
-[echarts.apache.org](https://echarts.apache.org/zh/index.html)
+### chartjs
+- [x] [chartjs.cn](http://chartjs.cn/)
 
 ### highcharts
-[highcharts.com](https://www.highcharts.com)
+- [ ] [highcharts.com](https://www.highcharts.com)
 
 ## 待修复bug
 
