@@ -3,7 +3,7 @@ var option = {
     textStyle: {
         color: '#08CD7C',
         fontSize: 14,
-        fontFamily: '微软雅黑'
+        fontFamily: 'Noto Sans'
     },
     title: {
         text: '温度',
