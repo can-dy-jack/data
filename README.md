@@ -23,6 +23,11 @@ Website of ocean data.
 - [ ] 网格 grid  
 ---
 
+#### 待实现功能
+- [ ] 适配深色模式
+- [ ] 适配移动端
+
+
 ### chartjs
 - [x] [chartjs.cn](http://chartjs.cn/)
 

@@ -1,21 +1,30 @@
 var pieChart = echarts.init(document.getElementById('echart-nightingale'));
 var pieOption = {
+    textStyle: {
+        color: '#5747F7'
+    },
     title: {
         text: '家庭支出',
-        subtext: '虚构图表',
-        x: 'center'
+        x: 'center',
+        textStyle: {
+            color: '#5747F7'
+        },
     },
     tooltip: {
         trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        formatter: "{a} <br/>{b} : {c} ({d}%)",
     },
     legend: {
         orient: 'vertical',
         x: 'left',
-        data: ['日常开支', '投资理财', '奢侈消费', '子女教育', '家庭备用金']
+        data: ['日常开支', '投资理财', '奢侈消费', '子女教育', '家庭备用金'],
+        textStyle: {
+            color: '#5747F7'
+        },
     },
     toolbox: {
         show: true,
+        right: '5%',
         feature: {
             mark: {
                 show: true
@@ -41,7 +50,7 @@ var pieOption = {
             },
             saveAsImage: {
                 show: true
-            }
+            },
         }
     },
     calculable: true,
@@ -49,6 +58,9 @@ var pieOption = {
         name: '支出类型',
         type: 'pie',
         radius: '55%',
+        label: {
+            color: '#5747F7'
+        },
         center: ['50%', '60%'],
         data: [{
             value: 3000,

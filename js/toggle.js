@@ -7,6 +7,7 @@ const title = document.getElementById("title");
 const nav = document.getElementById("nav");
 const trademark = document.getElementById("trademark");
 
+
 toggleBtn.addEventListener('click',()=>{
     colorTest = 'white';
     if(toggleBtn.classList.contains("toggled")){

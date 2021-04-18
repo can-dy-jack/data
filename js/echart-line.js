@@ -1,8 +1,13 @@
 var lineChart = echarts.init(document.getElementById('echart-line'));
 var lineOption = {
+    textStyle: {
+        color: '#FFBE22'
+    },
     title: {
         text: '气温变化',
-        subtext: '纯属虚构'
+        textStyle: {
+            color: '#FFBE22'
+        }
     },
     tooltip: {
         trigger: 'axis'
@@ -12,6 +17,7 @@ var lineOption = {
     },
     toolbox: {
         show: true,
+        right: '5%',
         feature: {
             mark: {
                 show: true

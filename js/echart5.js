@@ -3,6 +3,9 @@ var chartData = echarts.init(document.getElementById("echart-data"));
 var app = {};
 var optionData;
 optionData = {
+    textStyle: {
+        color: '#00EFFF'
+    },
     color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
     tooltip: {
         trigger: 'axis',
@@ -14,7 +17,10 @@ optionData = {
         }
     },
     legend: {
-        data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5']
+        data: ['Line 1', 'Line 2', 'Line 3', 'Line 4', 'Line 5'],
+        textStyle: {
+            color: '#00EFFF'
+        },
     },
     toolbox: {
         feature: {

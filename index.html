@@ -29,27 +29,36 @@
             </div>
         </div>
     </nav>
-
+    <hr class="hr-top" />
+<section class="realtimeData">
+    <h2>实时数据</h2>
     <div class="box">
-        <div id="echart-normal" style="width: 400px;height:400px;"></div>
         <div id="echart-nightingale" style="width: 400px;height:400px"></div>
+        <div id="echart-normal" style="width: 400px;height:400px;"></div>
         <div id="echart-line" style="width: 400px;height:400px"></div>
     </div>
-
-    <div class="box bottom-box">
-        <div><canvas id="chart-bar" width="400" height="400"></canvas></div>
-        <div id="echart-data" style="width: 450px;height:400px;"></div>
-        <div><canvas id="chart-line" width="400" height="400"></canvas></div>
-        <!-- shift + insert 粘贴    ctrl + insert  复制-->
+</section>
+<section class="statisticsData">
+    <h2>统计数据</h2>
+    <div class="box">
+        <!-- <div><canvas id="chart-bar" width="400" height="400"></canvas></div> -->
+        <div id="echart-data" style="width: 600px;height:400px;"></div>
+        <!-- <div><canvas id="chart-line" width="400" height="400"></canvas></div> -->
     </div>
-    <hr>
-
+    <div class="box">
+        <div id="echart-lr" style="width: 650px;height:500px"></div>
+    </div>
+    <div class="box bottom-box">
+        <div id="echart-timeData" style="width: 750px;height:540px;"></div>
+    </div>
+</section>
+<hr class="hr-bottom" />
     <footer class="trademark" id="trademark">
         <p>
             <span>友情链接:</span>
             <span><a href="http://chartjs.cn/">chart.js</a></span>
             <span><a href="https://echarts.apache.org/zh/index.html">echarts</a></span>
-            <span><a href="https://www.highcharts.com">highcharts</a></span>
+            <!-- <span><a href="https://www.highcharts.com">highcharts</a></span> -->
             <!-- <span><a href="">d3</a></span> -->
             <span><a href="http://42.193.131.94/#/">42.193.131.94</a></span>
         </p>
@@ -63,6 +72,8 @@
     <script src="js/echarts.js"></script>
     <script src="js/echart2.js"></script>
     <script src="js/echart-line.js"></script>
+    <script src="js/echart-lr.js"></script>
+    <script src="js/echart4.js"></script>
 
     <script src="js/echart5.js"></script>
 

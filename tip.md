@@ -263,3 +263,8 @@ import
 ![表情来自B站](https://i0.hdslb.com/bfs/emote/142409b595982b8210b2958f3d340f3b47942645.png@112w_112h.webp)
 ![表情来自B站](https://i0.hdslb.com/bfs/emote/e763846a534e790d402ee4ef1640c9bc02aaab37.png@112w_112h.webp)
 
+
+### 技巧
+
+- shift + insert 粘贴
+- ctrl + insert  复制
