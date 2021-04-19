@@ -57,7 +57,8 @@ h2{
 		flex-direction: column;
 	}
 	.statisticsData .box>div{
-		width: auto;
+		width: 400px;
+		height: 400px;
 	}
 }
 .bottom-box{
