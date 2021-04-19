@@ -17,7 +17,6 @@ body{
 ::-webkit-scrollbar-thumb:hover{
 	background: linear-gradient(#FF546C,#00EFFF,#FFBE22,#5747F7,#08CD7C);     
 } */
-
 nav{
 	height: 50px;
 	width: 100%;
@@ -52,16 +51,27 @@ h2{
 	justify-content: center;align-items: center;
 	margin-bottom: 50px;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 300px){
 	.box{
 		flex-direction: column;
 	}
 	.box div{
-		width: 300px;
-		height: 300px;
+		max-width: 300px;
 	}
 }
-@media screen and (min-width: 401px) and (max-width: 1200px) {
+@media screen and (min-width: 300px) and (max-width: 500px) {
+	.box{
+		flex-direction: column;
+	}
+	.box div{
+		max-width: 400px;
+	}
+	.stData .box div{
+		max-width: 400px;
+		max-height: 400px;
+	}
+}
+@media screen and (min-width: 501px) and (max-width: 1200px) {
 	.box{
 		flex-direction: column;
 	}
