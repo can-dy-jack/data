@@ -4,7 +4,7 @@ var pieOption = {
         color: '#5747F7'
     },
     title: {
-        text: '家庭支出',
+        text: '大气气压',
         x: 'center',
         textStyle: {
             color: '#5747F7'
@@ -12,7 +12,7 @@ var pieOption = {
     },
     tooltip: {
         trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)",
+        formatter: "{a} <br/>{b} bar: {c} ({d}%)",
     },
     legend: {
         orient: 'vertical',
@@ -55,7 +55,7 @@ var pieOption = {
     },
     calculable: true,
     series: [{
-        name: '支出类型',
+        name: '大气气压',
         type: 'pie',
         radius: '55%',
         label: {

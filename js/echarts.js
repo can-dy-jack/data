@@ -6,20 +6,20 @@ var option = {
         fontFamily: 'Noto Sans'
     },
     title: {
-        text: '温度',
+        text: '大气压力',
         left: '5%',
-        subtext: '友情链接',
-        sublink: 'http://42.193.131.94/#/',
-        subtarget: 'blank',
+        //subtext: '友情链接',
+        //sublink: 'http://42.193.131.94/#/',
+        // subtarget: 'blank',
         textStyle: {
             color: '#08CD7C',
             fontWeight: 400,
             fontSize: 20,
         },
-        subtextStyle: {
-            color: '#08CD7C',
-            fontSize: 12,
-        }
+        // subtextStyle: {
+        //     color: '#08CD7C',
+        //     fontSize: 9,
+        // }
     },
     legend: {
         data: ['温度'],
@@ -62,20 +62,20 @@ var option = {
     },
     xAxis: {
         type: 'category',
-        data: ['Jan','Feb','Mar','Jun','Aug','Sep',],
+        data: [1,2,3,4,5],
         name: '月份',
         nameLocation: 'middle',
         nameGap: 25
     },
     yAxis: {
-        name: 'g/cm²',
+        name: '英寸汞柱',
         nameLocation: 'middle',
         nameGap: 25
     },
     series: {
         name: '温度',
         type: 'bar',
-        data: [10, 23, 5, 11, 6, 12]
+        data: [270.8,270.8,270.8,180.6,0.2]
     }
 };
 myChart.setOption(option);
