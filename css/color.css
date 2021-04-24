@@ -1,7 +1,8 @@
-.color-white{
+.color-white {
 	background-color: white;
 }
-.color-black-1{
+
+.color-black-1 {
 	/* #08CD7C -> #242837-#201D2C*/
 	/* #5747F7 -> #191931-#1E1C44*/
 	/* #FFBE22 -> #272637-#201D2C */
@@ -9,9 +10,29 @@
 	/* #FF546C -> #2F3043 */
 	background-color: #201D2C;
 }
-.color-black-2{
+
+.color-black-2 {
 	background-color: #333;
 }
-.color-black-3{
+
+.color-black-3 {
 	background-color: black;
+}
+
+.color-zt {
+	/* 紫檀色 */
+	color: #4c221b;
+}
+
+.color-wl {
+	color: #08CD7C;
+}
+
+.color-lg {
+	/* 灰色 */
+	color: darkgrey;
+}
+
+.color-dg {
+	color: Black;
 }

@@ -7,6 +7,7 @@ const title = document.getElementById("title");
 const nav = document.getElementById("nav");
 const trademark = document.getElementById("trademark");
 
+const clock = document.getElementById('clock');
 
 toggleBtn.addEventListener('click',()=>{
     colorTest = 'white';
@@ -27,6 +28,7 @@ toggleBtn.addEventListener('click',()=>{
         lightenText.style.color = "black";
         darkenText.style.color = "#333";
     }
+
     if(bd.classList.contains("color-black-1")){
         bd.classList.add("color-white");
         bd.classList.remove("color-black-1");

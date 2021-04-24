@@ -8,11 +8,12 @@
     <title>chart</title>
     <link rel="icon" href="asset/img/web-logo2.png">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/clock.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/toggle.css">
     <link rel="stylesheet" href="css/color.css">
     <!-- 字体引入 -->
-    <link href="https://fonts.font.im/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.font.im/css?family=Noto+Sans" rel="stylesheet">
 </head>
 
@@ -33,14 +34,51 @@
     <section class="chart rtData">
         <h2>实时数据</h2>
         <div class="box">
-            <div id="echart-nightingale" style="width: 400px;height:400px"></div>
-            <div id="echart-normal" style="width: 400px;height:400px;"></div>
             <div id="echart-line" style="width: 400px;height:400px"></div>
+            <div id="echart-normal" style="width: 400px;height:400px;"></div>
+            <div class="calendar" id="calendar">
+                <div class="title">
+                    <div class="month color-wl" id="month">MONTH</div>
+                    <div class="year" id="year">2021</div>
+                    <a href="#" class="a-left color-zt" id="prev">《</a>
+                    <a href="#" class="a-right color-zt" id="next">》</a>
+                </div>
+                <div class="bd">
+                    <div class="day">
+                        <ul type="none">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                    </div>
+                    <div class="date">
+                        <ul id="day-ul" type="none"></ul>
+                    </div>
+                </div>
+                <script src="js/calendar.js"></script>
+            </div>
         </div>
         <div class="box">
             <div id="echart-line4" style="width: 400px;height:400px"></div>
-            <div id="echart-line5" style="width: 400px;height:400px;"></div>
-            <div id="echart-line6" style="width: 400px;height:400px"></div>
+            <div id="echart-nightingale" style="width: 400px;height:400px"></div>
+            <div class="clock-box" id="clock">
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="minute">
+                        <div class="mu" id="mn"></div>
+                    </div>
+                    <div class="second">
+                        <div class="sc" id="sc"></div>
+                    </div>
+                </div>
+            </div>
+            <script src="js/clock.js"></script>
         </div>
     </section>
     <section class="chart stData">

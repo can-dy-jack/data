@@ -1,0 +1,81 @@
+.clock-box {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: #555;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    z-index: 10;
+    position: relative;
+}
+.clock-box .clock {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent, rgba(255, 255, 255, 0.2)), url(../asset/img/clock.png);
+    /* 使图片 整个显现 即缩放填满至父元素 */
+    background-size: cover;
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-bottom: none;
+    border-left: none;
+}
+
+.clock::before {
+    content: "";
+    background-color: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position:absolute;
+    z-index: 1000;
+}
+.hour, .minute, .second{
+    position: absolute;
+}
+.hour, .hr{
+    width: 120px;height: 120px;
+    display:flex;
+}
+.minute, .mu{
+    width: 160px;height: 160px;
+}
+.second, .sc{
+    width: 200px;height: 200px;
+}
+.hr, .mu, .sc{
+    display:flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+.hr::before{
+    content: "";
+    position: absolute;
+    width: 8px;height: 60px;
+    z-index: 20;
+    background-color: red;
+    border-radius: 6px;
+}
+.mu::before{
+    content: "";
+    position: absolute;
+    width: 4px;height: 80px;
+    z-index: 28;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 130px;
+    z-index: 18;
+    background-color: black;
+    border-radius: 6px;
+}
