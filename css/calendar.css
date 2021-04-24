@@ -1,14 +1,14 @@
 .calendar {
     width: 360px;
     height: 360px;
+    box-sizing: border-box;
     /* background-color: #fff; 直接去掉背景，在黑暗模式下效果更好！*/
-    cursor: pointer;
     box-shadow: 3px 0 3px rgba(0, 0, 0, 0.1),
         -3px 0 3px rgba(0, 0, 0, 0.1),
         0 3px 3px rgba(0, 0, 0, 0.1),
         0 -3px 3px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 10px 20px 30px 20px;
+    border-radius: 15px;
+    /* margin: 10px 20px 30px 20px; */
 }
 
 .title {
