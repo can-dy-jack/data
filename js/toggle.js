@@ -38,8 +38,8 @@ toggleBtn.addEventListener('click',()=>{
         bd.classList.remove("color-white");
         bd.classList.add("color-black-1");
         title.style.color = "white";
-        nav.style.backgroundColor = "#121212cc";
-        trademark.style.backgroundColor = "#121212";
+        nav.style.backgroundColor = "#161b22";
+        trademark.style.backgroundColor = "#161b22";
         trademark.style.color = "gray";
     }
 });
