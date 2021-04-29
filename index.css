@@ -71,8 +71,9 @@ h2{
 		flex-direction: column;
 	}
 }
-@media screen and (min-width: 1201px) {
-	/* 右侧滚动条 */
+/* 右侧滚动条 */
+/* @media screen and (min-width: 1201px) {
+	
 	::-webkit-scrollbar{
 		width: 6px;
 		height: 300px;
@@ -85,7 +86,7 @@ h2{
 	::-webkit-scrollbar-thumb:hover{
 		background: linear-gradient(#00EFFF,#FFBE22,#5747F7,#08CD7C);     
 	}
-}
+} */
 
 .bottom-box{
 	margin-bottom: 80px;
