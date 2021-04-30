@@ -15,12 +15,26 @@
     <link rel="stylesheet" href="css/color.css">
     <!-- 字体引入 -->
     <link href="https://fonts.font.im/css?family=Noto+Sans" rel="stylesheet">
+    <!-- iconfont -  -->
+    <script src="http://at.alicdn.com/t/font_2523255_yvmy1x95n2.js"></script>
+    <style type="text/css">
+        .icon {
+            width: 1em; height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body class="color-white" id="bd">
     <nav id="nav">
         <div class="nav-box">
-            <h1 id="title" onClick="javascrtpt:window.location.href='./index.html'">Marine Data</h1>
+            <h1 id="title">Marine Data
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-icodata1"></use>
+                </svg>
+            </h1>
             <div class="toggle">
                 <p id="lightenText" class="toggle-text">lighten</p>
                 <div id="toggleBtn" class="toggle-btn">
@@ -32,7 +46,11 @@
     </nav>
     <hr class="hr-top" />
     <section class="chart rtData">
-        <h2>实时数据</h2>
+        <h2>实时数据
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-shishishuju"></use>
+            </svg>
+        </h2>
         <div class="box">
             <div id="echart-line" style="width: 400px;height:400px"></div>
             <div id="echart-normal" style="width: 400px;height:400px;"></div>
@@ -68,7 +86,11 @@
         </div>
     </section>
     <section class="chart stData">
-        <h2>统计数据</h2>
+        <h2>统计数据
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-tongjishuju"></use>
+            </svg>
+        </h2>
         <div class="box">
             <div id="echart-all" style="width: 700px;height:500px;"></div>
         </div>
@@ -82,9 +104,6 @@
         </div>
         <div class="box">
             <div class="clock-box" id="clock">
-                <span class="lk1"></span>
-                <span class="lk2"></span>
-                <span class="lk3"></span>
                 <div class="clock">
                     <div class="hour">
                         <div class="hr" id="hr"></div>
@@ -105,20 +124,43 @@
     </section>
     <hr class="hr-bottom" />
     <div class="emoji">
-        <img src="https://i0.hdslb.com/bfs/emote/431432c43da3ee5aab5b0e4f8931953e649e9975.png@112w_112h.webp" alt="ang">
+        <img src="./asset/img/celebrate.webp" alt="ang">
     </div>
     <footer class="trademark" id="trademark">
         <p>
             <span>友情链接:</span>
             <!-- <span><a href="http://chartjs.cn/">chart.js</a></span> -->
-            <span><a href="./html/main.html" target="_blank">子页面</a></span>
-            <span><a href="https://echarts.apache.org/zh/index.html" target="_blank">echarts</a></span>
+            <span>
+                <a href="./html/main.html" target="_blank">
+                    <!-- 子页面 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-fengsu"></use>
+                    </svg>
+                </a>
+            </span>
+            <span><a href="https://echarts.apache.org/zh/index.html" target="_blank"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-echarts"></use>
+            </svg></a></span>
             <!-- <span><a href="https://www.highcharts.com">highcharts</a></span> -->
             <!-- <span><a href="">d3</a></span> -->
-            <span><a href="http://42.193.131.94/#/">42.193.131.94</a></span>
+            <span>
+                <a href="http://42.193.131.94/#/">
+                    <!-- 42.193.131.94 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-vue"></use>
+                    </svg>
+                </a>
+            </span>
         </p>
         <p>
-            <span><a href="./asset/test/colorSelect/index.html" target="_blank">颜色选择器</a></span>
+            <span>
+                <a href="./asset/test/colorSelect/index.html" target="_blank">
+                    <!-- 颜色选择器 -->
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-quseqi"></use>
+                    </svg>
+                </a>
+            </span>
         </p>
         <p><small>© 2021 Kart Jim, Inc.</small></p>
     </footer>

@@ -1,55 +1,6 @@
-.clock-box span{
-    /* z-index: 35; */
-}
-
-.clock-box .lk1 {
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    height: 340px;
-    width: 340px;
-    border: 2px solid #555;
-    border-radius: 34% 64% 62% 35%/ 42% 45% 53% 57%;
-    transition: 0.4s;
-    animation: circle-all 6s linear infinite;
-}
-.clock-box .lk2 {
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    height: 340px;
-    width: 340px;
-    border: 2px solid #555;
-    border-radius: 34% 64% 62% 35%/ 42% 45% 53% 57%;
-    transition: 0.4s;
-    animation: circle-all 8s linear infinite;
-}
-.clock-box .lk3 {
-    position: absolute;
-    left: -20px;
-    top: -20px;
-    height: 340px;
-    width: 340px;
-    border: 2px solid #555;
-    border-radius: 34% 64% 62% 35%/ 42% 45% 53% 57%;
-    transition: 0.4s;
-    animation: circle-all 10s linear infinite;
-}
 .clock-box:hover{
     background-color: #666;
 }
-@keyframes circle-all{
-    0%{
-        transform: rotate(0deg);
-    }
-    50%{
-        transform: rotate(180deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
 .clock-box {
     height: 300px;
     cursor: pointer;

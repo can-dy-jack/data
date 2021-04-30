@@ -9,7 +9,7 @@
 
 body{
 	/* font-family: 'Noto Sans' ,serif; */
-	font-family: 'Source Han Sans SC VF','Noto Sans', serif;
+	font-family: 'Noto Sans','Source Han Sans SC VF', serif;
 }
 
 nav{
@@ -71,7 +71,7 @@ h2{
 		flex-direction: column;
 	}
 }
-/* 右侧滚动条 */
+
 /* @media screen and (min-width: 1201px) {
 	
 	::-webkit-scrollbar{

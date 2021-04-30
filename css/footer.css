@@ -22,9 +22,13 @@
 .trademark>p>span a{
 	/* font-family: "江西拙楷2.0",sans-serif; */
     color: darkcyan;
+	font-size: 20px;
 }
 .trademark>p>span a:hover{
 	color: rgb(0, 0, 200);
+}
+.trademark>p>span a svg{
+	font-size: 24px;
 }
 
 .footer-hr{
