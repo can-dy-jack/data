@@ -22,7 +22,7 @@ nav{
 	height: 50px;
 	width: 100%;
 	position: fixed;
-	backdrop-filter: brightness(100%) saturate(100%) blur(15px);;
+	backdrop-filter: brightness(100%) saturate(100%) blur(15px);
 	z-index: 1000;
 }
 .nav-box h1{

@@ -4,46 +4,53 @@
 body{
     background-color: rgb(380, 300, 350,);
 }
+:root {
+    --one: #5757f7;
+    --two: #8700f7;
+    --three: #0087f7;
+    --four: #575f00;
+    --bac: rgba(34, 50, 84,.6);
 
-
-
-
+}
 .card-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;/*重要，如果不设置内容不会垂直居中*/
     justify-content: center;
+    transform: translateY(-20px);
 }
 .card-box>div{
     width: 250px;
     height: 150px;
     border-radius: 25px;
     cursor: pointer;
-    transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
+    transform: rotateX(35deg) rotateY(-15deg) rotate(35deg);
     opacity: 0.9;
-    margin-bottom: -70px;
+    transition: 0.5s;
+    margin-bottom: -80px;
+    overflow: hidden;
     
-    background-color: #ebe5dd;
 }
 .card-box .card1 {
-    background-color: #5757f7;
-    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #3f58e3;
+    background-color: var(--one);
+    /* 背景色 - 20px设置立体效果、1px设置厚度效果 */
+    box-shadow: 20px 20px 60px var(--bac), 1px 1px 0px 1px  var(--one);
     z-index: 20;
 }
 .card-box .card2 {
-    background-color: #0087f7;
-    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #0087f7;
+    background-color: var(--two);
+    box-shadow: 20px 20px 60px var(--bac), 1px 1px 0px 1px var(--two);
     z-index: 15;
 }
 .card-box .card3 {
-    background-color: #8700f7;
-    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #8700f7;
+    background-color: var(--three);
+    box-shadow: 20px 20px 60px var(--bac), 1px 1px 0px 1px var(--three);
     z-index: 10;
 }
 .card-box .card4 {
-    background-color: #575f00;
-    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px  #575f00;
+    background-color: var(--four);
+    box-shadow: 20px 20px 60px var(--bac), 1px 1px 0px 1px  var(--four);
     z-index: 5;
 }
 .title{
@@ -53,4 +60,19 @@ body{
 .content{
     font: 500 23px 'Noto Sans';
     margin: 50px 20px;
+}
+/* 动态效果 */
+.card-box>div:hover{
+    transform: rotateX(10deg) rotateY(-10deg) rotate(10deg) translate(-30px, 40px);
+}
+.card-box>div::before{
+    content: '';
+    width: 100%;height: 100%;
+    position: absolute;
+    transform: translateX(-100%);
+    background: linear-gradient(45deg,transparent,transparent,rgba(255, 255, 255,.4) 40%,rgba(255, 255, 255,.4) 40%,transparent,transparent);
+    transition: all 0.4s ease-in-out;
+}
+.card-box div:hover::before {
+    transform: translateX(100%);
 }
