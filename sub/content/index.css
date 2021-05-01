@@ -1,0 +1,82 @@
+:root{
+    --backcolor: #252619;
+}
+
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color: var(--backcolor);
+}
+.content-box{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    align-items: center;justify-content: center;
+}
+.content-box .content{
+    width: 300px;
+    height: 300px;
+    margin: 30px 20px 20px 20px;
+    border-radius: 50%;
+    color: white;
+}
+.content-box .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.content-box .content .lunkuo{
+    width: 320px;
+    height: 320px;
+    position: absolute;left: -10px;top: -10px;
+    border: 2px solid rgb(250,250,250);
+    border-radius: 42% 65% 31% 45%;
+    animation: rotation 8s infinite;
+}
+.content-box .content .lunkuo::before{
+    content: '';
+    width: 320px;
+    height: 320px;
+    position: absolute;left: -10px;top: -10px;
+    border: 2px solid rgb(250,250,250);
+    border-radius: 62% 45% 41% 35%;
+    animation: rotation 8s infinite;
+    animation-delay:-2s;
+}
+.content-box .content .lunkuo::after{
+    content: '';
+    width: 320px;
+    height: 320px;
+    position: absolute;left: -10px;top: -10px;
+    border: 2px solid rgb(250,250,250);
+    border-radius: 32% 45% 61% 45%;
+    animation: rotation 8s infinite;
+    animation-delay:-4s;
+}
+.content-box .content:hover{
+    background-color: antiquewhite;
+    color: black;
+    cursor: pointer;
+    transition: all 0.7 ease-in-out;
+}
+
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.content-box .content h1{
+    margin: -10px 0 20px 0;
+}
+.content-box .content p{
+    margin: 20px 0 0 0;
+    font-size: 20px;
+}
