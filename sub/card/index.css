@@ -1,0 +1,56 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    background-color: rgb(380, 300, 350,);
+}
+
+
+
+
+.card-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;/*重要，如果不设置内容不会垂直居中*/
+    justify-content: center;
+}
+.card-box>div{
+    width: 250px;
+    height: 150px;
+    border-radius: 25px;
+    cursor: pointer;
+    transform: rotateX(45deg) rotateY(-15deg) rotate(45deg);
+    opacity: 0.9;
+    margin-bottom: -70px;
+    
+    background-color: #ebe5dd;
+}
+.card-box .card1 {
+    background-color: #5757f7;
+    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #3f58e3;
+    z-index: 20;
+}
+.card-box .card2 {
+    background-color: #0087f7;
+    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #0087f7;
+    z-index: 15;
+}
+.card-box .card3 {
+    background-color: #8700f7;
+    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px #8700f7;
+    z-index: 10;
+}
+.card-box .card4 {
+    background-color: #575f00;
+    box-shadow: 20px 20px 60px #22325480, 1px 1px 0px 1px  #575f00;
+    z-index: 5;
+}
+.title{
+    font: 600 26px 'Noto Sans';
+    margin: 10px 20px;
+}
+.content{
+    font: 500 23px 'Noto Sans';
+    margin: 50px 20px;
+}
