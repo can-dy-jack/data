@@ -4,7 +4,7 @@ var pieOption = {
         color: '#5747F7'
     },
     title: {
-        text: '大气气压',
+        text: '风速',
         x: 'center',
         textStyle: {
             color: '#5747F7'
@@ -17,7 +17,7 @@ var pieOption = {
     legend: {
         orient: 'vertical',
         x: 'left',
-        data: ['日常开支', '投资理财', '奢侈消费', '子女教育', '家庭备用金'],
+        data: ['真风向', '综合风向', '风速(节)', '风速(m/s)'],
         textStyle: {
             color: '#5747F7'
         },
@@ -64,19 +64,16 @@ var pieOption = {
         center: ['50%', '60%'],
         data: [{
             value: 3000,
-            name: '日常开支'
+            name: '真风向'
         }, {
             value: 3200,
-            name: '投资理财'
+            name: '综合风向'
         }, {
             value: 1000,
-            name: '奢侈消费'
+            name: '风速(节)'
         }, {
             value: 1600,
-            name: '子女教育'
-        }, {
-            value: 1600,
-            name: '家庭备用金'
+            name: '风速(m/s)'
         }]
     }]
 };

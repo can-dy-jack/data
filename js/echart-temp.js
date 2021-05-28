@@ -4,13 +4,13 @@ var optionat = {
         formatter: '{a} <br/>{b} : {c}%'
     },
     series: [{
-        name: 'Pressure',
+        name: 'temperature',
         type: 'gauge',
         detail: {
             formatter: '{value}'
         },
         data: [{
-            value: 50,
+            value: 21.4,
             name: '温度'
         }]
     }]

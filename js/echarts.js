@@ -22,7 +22,7 @@ var option = {
         // }
     },
     legend: {
-        data: ['温度'],
+        data: ['大气压力'],
         right: '35%',
         top: '2%',
         textStyle: {
@@ -73,9 +73,9 @@ var option = {
         nameGap: 25
     },
     series: {
-        name: '温度',
+        name: '大气压力',
         type: 'bar',
-        data: [270.8,270.8,270.8,180.6,0.2]
+        data: [270.8,270.8,270.8,180.6,170.2]
     }
 };
 myChart.setOption(option);
