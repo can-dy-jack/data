@@ -22,11 +22,11 @@ nav div>a{
     position: relative;
 }
 .main-box .img1{
-    width: 1000px;
+    width: 1200px;
 }
 #back{
     /* position: absolute;left: 0;top: 50px; */
-    width: 1000px;
+    width: 100%;
     text-overflow: hidden;
     z-index: -1;
 }
