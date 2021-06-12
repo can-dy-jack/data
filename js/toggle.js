@@ -1,3 +1,10 @@
+/*
+ * @Author: kart jim 
+ * @Date: 2021-06-11 15:28:00 
+ * @Last Modified by:   kart jim 
+ * @Last Modified time: 2021-06-11 15:28:00 
+ */
+
 const lightenText = document.getElementById("lightenText");
 const darkenText = document.getElementById("darkenText");
 const toggleBtn = document.getElementById("toggleBtn");
