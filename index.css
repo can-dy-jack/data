@@ -2,13 +2,101 @@
 	margin: 0;padding: 0;
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'Source Han Sans SC VF';
 	src: url('./asset/font/SourceHanSansSC-VF.otf');
-}
+}*
 
-body{
+/* body{ */
 	/* font-family: 'Noto Sans' ,serif; */
-	font-family: 'Source Han Sans SC VF', serif;
+	/* font-family: 'Source Han Sans SC VF', serif; */
+/* } */
+
+nav{
+	height: 50px;
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: #efefef;
+}
+.nav-box{
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	backdrop-filter: brightness(100%) saturate(100%) blur(15px);
+	z-index: 1000;
+}
+.nav-box h1{
+	position: fixed;
+	display: inline-block;
+	line-height: 50px;
+	padding-left: 20px;
+	cursor: pointer;
 }
 
+h2{
+	color: #08CD7C;
+	text-align: center;
+	margin: 10px 0 50px 0;
+}
+
+.box{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 50px;
+}
+@media screen and (max-width: 300px){
+	.box{
+		flex-direction: column;
+	}
+	.box div{
+		max-width: 300px;
+	}
+}
+@media screen and (min-width: 300px) and (max-width: 500px) {
+	.box{
+		flex-direction: column;
+	}
+	.box div{
+		max-width: 400px;
+	}
+	.stData .box div{
+		max-width: 400px;
+		max-height: 400px;
+	}
+}
+@media screen and (min-width: 501px) and (max-width: 1200px) {
+	.box{
+		flex-direction: column;
+	}
+}
+
+/* @media screen and (min-width: 1201px) {
+	
+	::-webkit-scrollbar{
+		width: 6px;
+		height: 300px;
+	}
+	::-webkit-scrollbar-thumb{
+		background: linear-gradient(#08CD7C,#5747F7,#FFBE22,#00EFFF);
+		border-radius: 3px;
+		transition: 2s;
+	}
+	::-webkit-scrollbar-thumb:hover{
+		background: linear-gradient(#00EFFF,#FFBE22,#5747F7,#08CD7C);     
+	}
+} */
+
+.bottom-box{
+	margin-bottom: 80px;
+}
+
+/* <hr /> */
+.hr-top{
+	transform: translateY(-20px);
+	border: 2px solid #555555;
+}
+.hr-bottom{
+	border: 1px solid #607070;
+}

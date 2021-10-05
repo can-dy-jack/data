@@ -43,7 +43,7 @@ Website of ocean data.
 
 - [ ] [highcharts.com](https://www.highcharts.com)
 
-## 待修复bug
+## 开发计划/进展
 
 ### 设计方向
 
@@ -57,6 +57,8 @@ Website of ocean data.
   - 免费 or 商用
 - 网站颜色统一，不要太花里胡哨
 - ![图片来自B站](https://i0.hdslb.com/bfs/emote/d8065c2e7ce48c929317a94553499a46fecc262a.png@112w_112h.webp)
+
+### 第三方组件
 
 - [ ] echart
 - [ ] chart
