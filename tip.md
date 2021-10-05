@@ -1,3 +1,5 @@
+# javascript学习笔记
+
 ## 事件处理
 addEventListener()  
 removeEventListener()  
